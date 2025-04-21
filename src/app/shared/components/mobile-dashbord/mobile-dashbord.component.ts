@@ -55,19 +55,20 @@ export class MobileDashbordComponent implements OnInit {
   //   }
   // }
 
-  quantity: number = 1;
+  quantity = 1;
 
-increaseQuantity() {
-  if (this.quantity < 10) {
-    this.quantity++;
+  increaseQuantity() {
+    if (this.quantity < 10) {
+      this.quantity++;
+    }
   }
-}
-
-decreaseQuantity() {
-  if (this.quantity > 1) {
-    this.quantity--;
+  
+  decreaseQuantity() {
+    if (this.quantity > 1) {
+      this.quantity--;
+    }
   }
-}
+  
 
 
 removeTag(product: Product, tag: string): void {

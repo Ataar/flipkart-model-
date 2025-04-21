@@ -36,16 +36,47 @@
           </ul>
         </div>
 
+
+
+
         <!-- Quantity and Buttons -->
         <div class="buttons">
-          <button 
+
+            <button 
+              class="btn btn-outline-secondary button01" 
+              (click)="decreaseQuantity()" 
+              [disabled]="quantity <= 1">
+              <span style="font-size: 20px;">−</span>
+
+            </button>
+          
+            <input 
+              type="number" 
+              class="form-control button02 text-center" 
+              [value]="quantity"
+              readonly />
+          
+            <button 
+              class="btn btn-outline-secondary button03" 
+              (click)="increaseQuantity()" 
+              [disabled]="quantity >= 10">
+              <span style="font-size: 20px;">+</span>
+
+            </button>
+          
+  
+
+
+
+
+          <!-- <button 
             class="btn btn-outline-secondary button01" 
             (click)="increaseQuantity()" 
             [disabled]="quantity > 10">
             +
-          </button>
+          </button> -->
 
-          <input 
+          <!-- <input 
             type="number" 
             class="form-control button02 text-center" 
             [value]="quantity"
@@ -56,7 +87,7 @@
             (click)="decreaseQuantity()" 
             [disabled]="quantity > 10">
             -
-          </button>
+          </button> -->
 
           <button class="btn btn-info text-white text001">Add to cart</button>
           <!-- <button 
@@ -139,3 +170,5 @@
     </div>
   </div>
 </div>
+
+

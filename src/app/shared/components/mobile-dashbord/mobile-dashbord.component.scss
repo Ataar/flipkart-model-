@@ -59,9 +59,9 @@
   .button01,
   .button03 {
     width: 40px;
-    height: 40px;
-    font-size: 1.2rem;
-    text-indent: -2px !important;
+    height: 30px;
+    padding: 0 5px;
+    font-weight: 8000;
   }
 
   .button02 {
@@ -186,16 +186,13 @@
   font-size: 12px;
   font-weight: bold;
 }
-.buttons
-  .button01
-  , .buttons
-    .button03
-     {
+
+.button01,
+.button03 {
   width: 40px;
-  height: 40px;
-  font-size: 1.2rem;
-  text-indent: -2px !important;
-  font-weight: bold;
+  height: 30px;
+  padding: 0 5px;
+  font-weight: bold; 
 }
 
 
@@ -224,17 +221,15 @@
       font-size: 15px;
       font-weight: bold;
     }
-    .buttons
-     .button01
-     , .buttons
-       .button03
-        {
-      width: 40px;
-      height: 40px;
-      font-size: 1.2rem;
-      text-indent: -2px !important;
-      font-weight: bold;
-  }
+    
+.button01,
+.button03 {
+  width: 40px;
+  height: 30px;
+  padding: 0 5px;
+  font-weight: bold; 
+}
+
   .buttons
      .button02
       {
