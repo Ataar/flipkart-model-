@@ -166,13 +166,14 @@
   text-indent: -3px;
 }
 
-.nav-pills  .nav-link{
-  margin-right: 0.5rem;
-  border-radius: 50rem;
-  padding: 0.4rem 1rem;
-  margin: 0 11px;
+.nav-pills .nav-link.active {
+  background-color: #007bff;
+  color: #fff;
+  margin: 0px 1px;
+ 
 }
 }
+
 
 
 
@@ -225,17 +226,16 @@
   .like-message {
     font-size: 0.8rem;
     top: -28px;
-    // white-space: nowrap;
+    
   }
 
-  .nav-pills .nav-link{
-    margin-right: 0.5rem;
-    border-radius: 50rem;
-    padding: 0.4rem 1rem;
-    margin: 0 25px;
+
+
+.nav-pills .nav-link.active {
+  background-color: #007bff;
+  color: #fff;
+  margin: 0 13px;
 }
-
-
     
   }
 
@@ -255,17 +255,17 @@
 
 
   
-@media(max-width:425px)
-{
-  .nav-pills  .nav-link {
-    margin-right: 0.5rem;
-    border-radius: 50rem;
-    padding: 0.4rem 1rem;
-    margin: 0 37px;
-}
+// @media(max-width:425px)
+// {
+//   .nav-pills  .nav-link {
+//     margin-right: 0.5rem;
+//     border-radius: 50rem;
+//     padding: 0.4rem 1rem;
+//     margin: 0 37px;
+// }
 
 
-}
+// }
 
 
 
