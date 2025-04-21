@@ -65,13 +65,11 @@ button.navbar-toggler {
   margin: 9px 2px !important;
 }
 
-  
 }
+  
 
-// /* Responsive for all devices up to 480px */
-// @media (max-width: 480px) {
-//   .navbar-dark .navbar-nav .nav-link {
-//       font-size: 16px;  /* Adjust font size */
-//       width: 85px;      /* Adjust width */
-//   }
-// }
+.close-icon {
+  font-size: 2rem;
+  line-height: 1;
+  color: #f5eeee;
+}
