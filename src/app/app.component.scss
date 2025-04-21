@@ -1,0 +1,49 @@
+
+/* Custom active link styling */
+.nav-item.active .nav-link {
+  background-color: #ebf0ec !important; /* Change to your preferred color */
+  color: rgb(20, 3, 3) !important; /* Text color */
+  border-radius: 5px; /* Optional rounded corners */
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  font-family: Georgia;
+  color: rgba(255,255,255,.5);
+  font-size: 20px;
+  // display: block;
+  margin: 0 auto !important;
+}
+.navbar-dark .navbar-nav .nav-link  {
+    font-size: 14px;  /* Smaller font size */
+    width: 80px;      /* Adjust width for smaller screens */
+    margin: 8px 0 0 -20px;    /* Adjust margin for better spacing */
+    text-align: center;
+}
+
+
+/* Responsive for devices with width 320px and below */
+@media (min-width: 320px) and (max-width:768px){
+
+  .img01 {
+    width: 120px;
+    margin: 2px 120px  0 -38px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  font-size: 14px;
+  width: 80px;
+  margin: 8px 0 0 -20px;
+  text-align: center;
+  margin: 12px -22px !important;
+}
+
+  
+}
+
+// /* Responsive for all devices up to 480px */
+// @media (max-width: 480px) {
+//   .navbar-dark .navbar-nav .nav-link {
+//       font-size: 16px;  /* Adjust font size */
+//       width: 85px;      /* Adjust width */
+//   }
+// }

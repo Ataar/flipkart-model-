@@ -1,0 +1,141 @@
+<div class="container">
+  <div *ngFor="let proData of productArr" class="card  mb-4 p-3">
+    <div class="row g-0 align-items-center">
+      
+      <!-- Left column: Owl Carousel for Product Images -->
+      <div class="col-md-12 text">
+        <div class="owl-carousel owl-theme">
+          <div class="item" *ngFor="let img of proData.images">
+            <img [src]="img" class="card-img-top img-fluid" [alt]="proData.title" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Right column: Product Details -->
+      <div class="col-md-6 mt-3 mt-md-0 max-6 text02">
+        <h5>{{ proData.title }}</h5>
+
+        <p>
+          <strong>Rating:</strong>
+          <span class="stars">
+            <ng-container *ngFor="let star of getStars(proData.rating)">
+              {{ star }}
+            </ng-container>
+            ({{ proData.rating }})
+          </span>
+        </p>
+
+        <p><strong>Reviews Count:</strong> {{ proData.reviews_count }}</p>
+        <p><strong>Total Price : </strong> <span class="dollar">{{ proData.total_price }}</span></p>
+
+        <div *ngIf="proData.product_description?.length">
+          <ul class="desc-list">
+            <li *ngFor="let desc of proData.product_description">
+              <span class="tick-circle">&#10003;</span> {{ desc }}
+            </li>
+          </ul>
+        </div>
+
+        <!-- Quantity and Buttons -->
+        <div class="buttons">
+          <button 
+            class="btn btn-outline-secondary button01" 
+            (click)="increaseQuantity()" 
+            [disabled]="quantity > 10">
+            +
+          </button>
+
+          <input 
+            type="number" 
+            class="form-control button02 text-center" 
+            [value]="quantity"
+            readonly />
+
+          <button 
+            class="btn btn-outline-secondary button03" 
+            (click)="decreaseQuantity()" 
+            [disabled]="quantity > 10">
+            -
+          </button>
+
+          <button class="btn btn-info text-white text001">Add to cart</button>
+          <!-- <button 
+          (click)="onClick()" 
+          class="btn btnHeart"
+          [ngClass]="{ 'text-white': isFavorite, 'btn-light': !isFavorite }"
+          [title]="isFavorite ? 'You liked 😊' : 'Click to like 💕'">
+          
+          <span class="material-symbols heart01" *ngIf="!isFavorite">🤎</span>
+          <span class="material-symbols" *ngIf="isFavorite">💖</span>
+        </button> -->
+        <div class="like-wrapper position-relative text-center">
+          <div *ngIf="showLikeMessage" class="like-message">You liked 😊</div>
+        
+          <button 
+            (click)="onClick()" 
+            class="btn btnHeart"
+            [ngClass]="{ 'text-white': isFavorite, 'btn-light': !isFavorite }"
+            [title]="isFavorite ? 'You liked 😊' : 'Click to like 💕'">
+            
+            <span class="material-symbols heart01" *ngIf="!isFavorite">🤎</span>
+            <span class="material-symbols" *ngIf="isFavorite">💖</span>
+          </button>
+        </div>
+        
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Tabs and Chips -->
+    <div class="row mt-3">
+      <div class="col-md-6">
+        <!-- Tabs -->
+        <ul class="nav nav-pills">
+          <li *ngFor="let tab of tabData" class="nav-item">
+            <a 
+              href="javascript:;" 
+              class="nav-link"
+              [ngClass]="{ 'active': selectTab === tab }"
+              (click)="selectTab = tab">
+              {{ tab }}
+            </a>
+          </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="card card01 mt-2">
+          <div class="tab-content">
+            <!-- Description Tab -->
+            <ng-container *ngIf="selectTab === 'Description'">
+              <div *ngFor="let desc of proData.product_description">
+                <p>{{ desc }}</p>
+              </div>
+            </ng-container>
+
+            <!-- Details Tab -->
+            <ng-container *ngIf="selectTab === 'Details'">
+              <div *ngIf="proData.product_details" [innerHTML]="proData.product_details">
+              </div>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tags with Material Chips -->
+      <div class="col-md-6">
+        <mat-chip-list aria-label="Product tags" class="chip-container">
+          <mat-chip
+            *ngFor="let tag of proData.tags"
+            [removable]="true"
+            (removed)="removeTag(proData, tag)">
+            {{ tag }}
+            <button matChipRemove>
+              <mat-icon>cancel</mat-icon>
+            </button>
+          </mat-chip>
+        </mat-chip-list>
+      </div>
+    </div>
+  </div>
+</div>

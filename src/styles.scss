@@ -1,0 +1,53 @@
+/* You can add global styles to this file, and also import other style files */
+
+// html, body { height: 100%; }
+// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+* 
+{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+
+/* In styles.css or styles.scss */
+.center-snackbar .mat-simple-snackbar {
+   display: flex !important;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   color: rgb(5, 255, 109);
+   letter-spacing: 2px;
+  //  color: rgb(58, 247, 10);
+   font-size: 16px !important;  /* Set the font size of snackbar message */
+   font-weight: bold;
+ }
+ 
+// body
+// {
+//    background-color: #380202;
+// }
+ 
+ /* Target the button within the snackbar action area */
+ .center-snackbar .mat-button {
+   font-size: 16px !important;  /* Ensure the button text has the right font size */
+      /* Change color of the close button text */
+      line-height: 38px !important;
+ }
+ .blur-background {
+   filter: blur(5px);
+   pointer-events: none;
+   transition: filter 0.3s ease;
+ }
+
+ .mat-snack-bar-container {
+  background: #380202;
+  
+}
+
+
+ul li
+{
+  list-style-type: none;
+}

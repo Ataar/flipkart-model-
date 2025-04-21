@@ -1,0 +1,555 @@
+
+// Container and Card
+.container {
+  padding: 1rem;
+}
+
+.card {
+
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+// Owl Carousel Image Styling
+.owl-carousel .item img {
+  max-height: 250px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+// Product Title and Text
+.text02 h5 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+// Stars
+.stars {
+  color: #f5b301;
+}
+
+// Dollar
+.dollar {
+  color: #28a745;
+  font-weight: 600;
+}
+
+// Description List
+.desc-list {
+  padding-left: 0;
+  list-style: none;
+  
+  li {
+    margin-bottom: 5px;
+    .tick-circle {
+      color: green;
+      margin-right: 5px;
+    }
+  }
+}
+
+// Buttons
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  margin-top: 1rem;
+
+  .button01,
+  .button03 {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    text-indent: -2px !important;
+  }
+
+  .button02 {
+    width: 60px;
+    text-align: center;
+    text-indent: 12px;
+  }
+
+  .text001 {
+    // flex: 1;
+    min-width: 120px;
+  }
+}
+
+// Heart Button
+.btnHeart {
+  border: none;
+  font-size: 1.4rem;
+  padding: 6px 10px;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+// Like Message
+.like-wrapper {
+  position: relative;
+}
+
+.like-message {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  background-color: #fce4ec;
+  color: #d63384;
+  border-radius: 6px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+// Tabs
+.nav-pills .nav-link {
+  margin-right: 0.5rem;
+  border-radius: 50rem;
+  padding: 0.4rem 1rem;
+
+  &.active {
+    background-color: #007bff;
+    color: #fff;
+  }
+}
+
+// Tab Card
+.card01 {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+// Chips
+.chip-container {
+  margin-top: 1rem;
+
+  mat-chip {
+    margin: 4px;
+  }
+}
+
+.like-message {
+  font-size: 0.8rem;
+  top: -40px;
+  white-space: nowrap;
+  font-weight: bold; 
+}
+
+
+@media(max-width:320px)
+{
+  .text02  h5 {
+    font-size: 13px !important;
+    font-weight: bold;
+}
+
+.buttons  .button02 {
+  width: 60px;
+  text-align: center;
+  text-indent: -3px;
+}
+
+.nav-pills  .nav-link{
+  margin-right: 0.5rem;
+  border-radius: 50rem;
+  padding: 0.4rem 1rem;
+  margin: 0 11px;
+}
+}
+
+
+
+@media (min-width: 375px) and (max-width: 768px) {
+  .card {
+    padding: 0.8rem;
+  }
+
+  .text02 h5 {
+    font-size: 0.78rem;
+  }
+
+
+  .buttons[_ngcontent-jrv-c91] {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    /* align-items: center; */
+    margin-top: 1rem;
+}
+
+  .desc-list li {
+    font-size: 0.85rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.4rem;
+
+    .button01,
+    .button03,
+    .button02 {
+      width: 100%;
+      font-size: 1rem;
+    }
+
+    .text001 {
+      width: 100%;
+      font-size: 0.95rem;
+    }
+  }
+
+  .btnHeart {
+    display: block;
+    width: 100%;
+    font-size: 1.2rem;
+  }
+
+  .like-message {
+    font-size: 0.8rem;
+    top: -28px;
+    // white-space: nowrap;
+  }
+
+  .nav-pills .nav-link{
+    margin-right: 0.5rem;
+    border-radius: 50rem;
+    padding: 0.4rem 1rem;
+    margin: 0 25px;
+}
+
+
+    
+  }
+
+  .chip-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    mat-chip {
+      font-size: 0.8rem;
+    }
+  }
+
+  .owl-carousel .item img {
+    max-height: 160px;
+  }
+
+
+  
+@media(max-width:425px)
+{
+  .nav-pills  .nav-link {
+    margin-right: 0.5rem;
+    border-radius: 50rem;
+    padding: 0.4rem 1rem;
+    margin: 0 37px;
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// :host {
+//     display: block;
+//     padding: 2rem 1rem;
+//     background-color: #f8f9fa; // light gray background
+//   }
+  
+//   h5 {
+//     font-size: 12px;
+//     font-weight: 600;
+//     color: #ffffff !important; // Bootstrap primary
+//     margin-bottom: 0.5rem;
+  
+//   }
+
+
+  
+//   .card-container {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 1.5rem;
+//   }
+  
+
+  
+//   .product-card {
+//     background: #ffffff;
+//     border: 1px solid #dee2e6;
+//     border-radius: 0.5rem;
+//     padding: 1.5rem;
+//     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+//     transition: transform 0.2s;
+  
+//     &:hover {
+//       transform: translateY(-3px);
+//       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+//     }
+  
+//     p {
+//       margin: 0.3rem 0;
+//       color: #333;
+//       font-size: 0.95rem;
+//     }
+  
+//     ul {
+//       margin-top: 0.5rem;
+//       padding-left: 1.2rem;
+  
+//       li {
+//         font-size: 0.92rem;
+//         color: #555;
+//         line-height: 1.4;
+//       }
+//     }
+//   }
+  
+//   @media (max-width: 768px) {
+//     .product-card {
+//       padding: 1rem;
+//     }
+  
+//     h5 {
+//       font-size: 1.2rem;
+//     }
+//   }
+//   .stars {
+//     color: #f1c40f;
+//     font-size: 0.99rem;
+//     letter-spacing: 1px;
+//   }
+
+//   .dollar
+//   {
+//     color: rgb(14, 56, 245);
+//     font-size: 16px;
+//   }
+//   .custom-card {
+//     width: 900px;
+    
+    
+//   }
+
+  
+
+//   .desc-list li {
+    
+//     margin-bottom: 6px;
+//     display: flex;
+//     align-items: center;
+//   }
+  
+//   .tick-circle {
+//     display: inline-block;
+//     width: 20px;
+//     height: 20px;
+//     background-color: #28a745; /* Bootstrap green */
+//     color: white;
+//     border-radius: 60%;
+//     text-align: center;
+//     line-height: 20px;
+//     font-size: 14px;
+//     margin-right: 10px;
+//   }
+  
+//   .text001
+//   {
+//     margin: 0 18px;
+//     padding: 10px 20px !important;
+//   }
+
+
+  
+//   .img-fluid
+//   {
+//     width: 60%;
+//     margin: 12px 0;
+//   }
+ 
+//   :host {
+//     display: block;
+//     padding: 2rem 1rem;
+//     background-color: transparent; /* instead of removing */
+//   }
+  
+  
+ 
+
+
+// .col-md-6.mt-3.mt-md-0.max-6.text02{
+  
+//   // background-color: #020a16;
+//   color: rgb(0, 0, 0);
+//   border-radius: 5px;
+//   margin:5px 0px 29px 40px !important;
+//   padding: 22px;
+// }
+
+// .buttons
+// {
+//   display: flex;
+//   align-items: center;
+// }
+
+// .button01 , .button03{
+//   padding: 6px 15px;
+//   font-weight: bold;
+//   color: rgb(0, 0, 0);
+//   font-size: 15px;
+// }
+
+  
+
+// input.form-control.button02 {
+//   text-align: center;
+//   width: 20%;
+//   text-indent: 6px;
+// }
+
+
+
+// .btnHeart {
+//   border: none !important;
+//   box-shadow: none !important;
+//   font-size: 20px;
+//   display: block;
+//   margin-left: -17px;
+  
+// }
+
+
+
+// .like-wrapper {
+//   display: inline-block;
+//   position: relative;
+// }
+
+// .like-message {
+//   position: absolute;
+//   top: -30px;
+//   left: 50%;
+//   transform: translateX(-50%);
+//   padding: 6px 12px;
+//   font-size: 0.95rem;
+//   font-weight: 500;
+//   background-color: #fce4ec;
+//   color: #d63384;
+//   border-radius: 6px;
+//   animation: fadeIn 0.3s ease-in-out;
+//   white-space: nowrap;
+// }
+
+// @keyframes fadeIn {
+//   from { opacity: 0; transform: translateX(-50%) translateY(-5px); }
+//   to { opacity: 1; transform: translateX(-50%) translateY(0); }
+// }
+
+// .btnHeart {
+//   border: none;
+//   border-radius: 8px;
+//   transition: transform 0.2s;
+// }
+
+// .btnHeart:hover {
+//   transform: scale(1.05);
+//   cursor: pointer;
+// }
+
+
+
+
+// .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+//   color: #fff;
+//   background-color: #007bff;
+//   margin: 0 0 20px 0;
+// }
+
+// .card01
+// {
+//   margin: 0 5%;
+// }
+
+// .tab-content{
+//   text-align:justify;
+//   padding: 20px;
+//   margin: 0  20px 0 20px;
+//   letter-spacing: 1px;
+// }
+
+// .nav {
+//   display: flex;
+//   justify-content: center;
+//   font-size: large;
+//   font-family: georgia;
+ 
+// }
+
+
+// @media(max-width:320px)
+// {
+//    .card{
+//     margin:0 -20%;
+//   }
+
+//   .col-md-6 img
+//   {
+//     margin: 0 20%;
+//   }
+
+//    .text02 h5 p 
+//    {
+//      text-align: center;
+//      display: block;
+//      margin: 0 -20%;
+//    }
+
+//    .col-md-6.mt-3.mt-md-0.max-6.text02[_ngcontent-ygx-c91] {
+//     display: block;
+//     background-color: #020a16;
+//     color: white;
+//     border-radius: 5px;
+//     margin: 40px 0px 29px 24px !important;
+//     padding: 22px;
+//     width: 86% !important;
+// }
+// }
+
+// .owl-carousel .item img {
+//   max-height: 300px; /* adjust height as needed */
+//   object-fit: contain; /* or use 'cover' for cropped */
+//   width: 100%;
+//   display: block;
+//   margin: auto;
+// }
