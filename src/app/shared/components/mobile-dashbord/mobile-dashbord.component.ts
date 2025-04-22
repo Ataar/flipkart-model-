@@ -18,10 +18,10 @@ export class MobileDashbordComponent implements OnInit {
       items: 1,
       loop: true,
       margin: 10,
-      nav: true,
-      dots: true,
+      nav: false,
+      dots: false,
       autoplay: true,
-      autoplayTimeout: 3000,
+      autoplayTimeout: 2000,
       autoplayHoverPause: true
     });
   }
